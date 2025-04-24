@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Create an Account</h1>
+      <p>Join us and get started today!</p>
+    </header>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <label for="regUsername">Username</label>
+        <input
+          type="text"
+          id="regUsername"
+          placeholder="Enter your username"
+          required
+        />
+
+        <label for="regPassword">Password</label>
+        <input
+          type="password"
+          id="regPassword"
+          placeholder="Create a password"
+          required
+        />
+
+        <button type="submit">Register</button>
+        <p id="regSuccess"></p>
+        <a href="LoginPage.html">Already have an account? Login</a>
+      </form>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

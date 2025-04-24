@@ -1,0 +1,88 @@
+/* Background Gradient and Centering */
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Soft gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for the form */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 600;
+}
+
+header h3 {
+    font-size: 18px;
+    color: #555;
+    font-weight: 400;
+}
+
+/* Input Field Styling */
+input {
+    border-radius: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #feb47b; /* Subtle glow effect */
+    border-color: #feb47b;
+}
+
+/* Button Styling */
+button {
+    background-color: #feb47b;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff7e5f;
+}
+
+/* Create Account Link */
+a {
+    color: #feb47b;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff7e5f;
+}
+
+/* Fade-in animation for form */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
