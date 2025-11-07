@@ -72,7 +72,7 @@ function showResultPopup() {
         });
 
         document.getElementById("logoutBtn").addEventListener("click", () => {
-          window.location.href = "loginPage.html";
+          window.location.href = "index.html";
         });
       },
       showConfirmButton: false,
