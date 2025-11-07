@@ -1,88 +1,130 @@
-/* Background Gradient and Centering */
-body {
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Soft gradient */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Container for the form */
-.form-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 380px;
-    animation: fadeIn 1.5s ease-in-out;
+body, html {
+  height: 100%;
+  overflow: hidden;
 }
 
-/* Header Styling */
-header h1 {
-    font-size: 36px;
-    color: #333;
-    font-weight: 600;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-45deg, #1f1c2c, #928dab, #2b5876, #4e4376);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
 }
 
-header h3 {
-    font-size: 18px;
-    color: #555;
-    font-weight: 400;
+/* Gradient background animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Input Field Styling */
-input {
-    border-radius: 20px;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #f7f7f7;
-    border: 2px solid #ddd;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
+/* Admin Side */
+.admin-side {
+  flex: 1;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-input:focus {
-    box-shadow: 0 0 10px #feb47b; /* Subtle glow effect */
-    border-color: #feb47b;
+.admin-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: gold;
 }
 
-/* Button Styling */
-button {
-    background-color: #feb47b;
-    border: none;
-    color: white;
-    border-radius: 20px;
-    font-size: 16px;
-    padding: 12px;
-    width: 100%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.admin-side form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-button:hover {
-    background-color: #ff7e5f;
+.admin-side input {
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1rem;
 }
 
-/* Create Account Link */
-a {
-    color: #feb47b;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.admin-side input::placeholder {
+  color: #ddd;
 }
 
-a:hover {
-    color: #ff7e5f;
+.admin-side button {
+  padding: 12px;
+  background: gold;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* Fade-in animation for form */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.admin-side button:hover {
+  background: #ffd700;
+}
+
+.admin-side a {
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Student Side */
+.student-side {
+  flex: 1;
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid rgba(255,255,255,0.2);
+}
+
+.student-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #87cefa;
+}
+
+.student-side p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.student-side button {
+  padding: 12px 25px;
+  background: #87cefa;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.student-side button:hover {
+  transform: scale(1.05);
 }

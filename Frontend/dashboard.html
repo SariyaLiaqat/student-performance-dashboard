@@ -3,66 +3,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students Data</title>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style2.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Students Data</title>
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="style2.css" />
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light justify-content-between fixed-top">
+    <h1>Students Data</h1>
+    <div>
+      <button class="btn btn-danger mr-2" type="button" onclick="newStudent()">Add New Student</button>
+      <button class="btn btn-outline-dark" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-        <h1>Students Data</h1>
-        <div>
-            <button class="btn btn-danger mr-2" type="button" onclick="newStudent()">Add New Student</button>
-            <button class="btn btn-outline-dark" id="logoutBtn">Logout</button>
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search..." id="search" />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" onclick="search()">Search</button>
+          </div>
         </div>
-    </nav>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search..." id="search">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" onclick="search()">Search</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <table class="table table-bordered" id="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Student Name</th> 
-                    <th>Roll Number</th>
-                    <th>Maths</th>
-                    <th>English</th>
-                    <th>Urdu</th>
-                    <th>Science</th>
-                    <th>Total</th>
-                    <th>Percentage</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="main">
-            </tbody>
-        </table>
+      </div>
     </div>
 
-    <script>
-        if (!localStorage.getItem('authToken')) {
-            window.location.href = 'LoginPage.html';
-        }
-    </script> 
+    <table class="table table-bordered" id="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Student Name</th>
+          <th>Roll Number</th>
+          <th>Maths</th>
+          <th>English</th>
+          <th>Urdu</th>
+          <th>Science</th>
+          <th>Total</th>
+          <th>Percentage</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="main">
+        <!-- Students will be dynamically inserted here via JS -->
+      </tbody>
+    </table>
+  </div>
+  <!-- This line ensures that if you're not logged in, you’ll be redirected to the login page. -->
+  <script>
+    if (!localStorage.getItem("authToken")) {
+      window.location.href = "LoginPage.html";
+    }
+  </script>
 
-    <script src="auth.js"></script> 
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="auth.js"></script>
+<script src="app.js"></script>
 
 </body>
+
 </html>

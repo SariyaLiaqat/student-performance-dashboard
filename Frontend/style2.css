@@ -1,140 +1,121 @@
-
-/* General Styling */
-body {
-  background: linear-gradient(135deg, #1d3557, #5e8c61);
-  min-height: 100vh;
-  font-family: 'Arial', sans-serif;
-  color: white;
-  padding: 20px;
+/* ===== Body and Background ===== */
+body, html {
   margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  background: linear-gradient(-45deg, #1f1c2c, #928dab, #2b5876, #4e4376);
+  background-size: 400% 400%;
 }
 
-/* Sticky Navbar Styling */
+body {
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+}
+
+/* ===== Navbar ===== */
 .navbar {
   width: 100%;
-  background: rgba(29, 53, 87, 0.9);
-  padding: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  border-radius: 12px;
 }
 
 .navbar h1 {
-  color: #fb6f92;
+  color: gold;
   font-size: 28px;
-  font-weight: bold;
 }
 
-/* Buttons Styling */
-.btn-danger,
-#logoutBtn {
-  background: #a53860;
-  color: white;
+.navbar button {
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
   border-radius: 8px;
-  transition: 0.3s ease-in-out;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.btn-danger:hover,
+.navbar .btn-danger,
+#logoutBtn {
+  background: gold;
+  color: #000;
+}
+
+.navbar .btn-danger:hover,
 #logoutBtn:hover {
-  background: #fb6f92;
-  transform: scale(1.1);
+  background: #ffd700;
 }
 
-.btn-primary {
-  background: #5e8c61;
-  border: none;
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  background: #1d3557;
-  transform: scale(1.1);
-}
-
-/* Search Bar */
+/* ===== Search Bar ===== */
 .input-group .form-control {
-  border-radius: 20px;
-  padding: 10px;
-  border: 2px solid #fb6f92;
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
-/* Table Styling */
-.table-container {
-  width: 90%;
-  max-width: 1200px;
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+.input-group .form-control::placeholder {
+  color: #ddd;
 }
 
-.table {
+.input-group .form-control:focus {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* ===== Table Styling ===== */
+table {
   width: 100%;
   border-collapse: collapse;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 10px;
+  margin-top: 20px;
+  color: #fff;
 }
 
-.table thead {
-  background: #a53860;
-  color: white;
-  font-size: 18px;
-}
-
-.table th,
-.table td {
+table th {
+  background: gold;
+  color: #000;
   padding: 12px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
 
-.table tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.2);
+table td {
+  background: rgba(255,255,255,0.08);
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
 }
 
-.table tbody tr:hover {
-  background: rgba(251, 111, 146, 0.3);
-  transition: 0.3s;
+table tr:hover {
+  background: rgba(255,255,255,0.15);
 }
 
-/* 3D Background Effect */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-  z-index: -1;
-  filter: blur(5px);
+/* ===== Buttons inside Table ===== */
+.btn-primary,
+.btn-edit {
+  background: #87cefa;
+  color: #000;
+  border-radius: 8px;
+  padding: 6px 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.btn-primary:hover,
+.btn-edit:hover {
+  background: #00bfff;
+  transform: scale(1.05);
 }
 
-h1,
-.table-container,
-.btn {
-  animation: fadeIn 0.8s ease-in-out;
+/* ===== Responsive Container ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }

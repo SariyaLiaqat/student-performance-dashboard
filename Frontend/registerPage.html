@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,12 +17,14 @@
     <!-- Registration Form -->
     <div class="form-container">
       <h2>Register</h2>
-      <form id="registerForm">
-        <label for="regUsername">Username</label>
+      <form id="registerForm" autocomplete="off">
+        <label for="regUsername">Email</label>
         <input
-          type="text"
+          type="email"
           id="regUsername"
-          placeholder="Enter your username"
+          name="username"
+          placeholder="Enter your email"
+          autocomplete="off"
           required
         />
 
@@ -29,7 +32,9 @@
         <input
           type="password"
           id="regPassword"
-          placeholder="Create a password"
+          name="password"
+          placeholder="Create a strong password"
+          autocomplete="new-password"
           required
         />
 
