@@ -234,7 +234,7 @@ if (logoutBtn) {
           "You have been logged out successfully.",
           "success"
         ).then(() => {
-          window.location.href = "LoginPage.html";
+          window.location.href = "index.html";
         });
       }
     });

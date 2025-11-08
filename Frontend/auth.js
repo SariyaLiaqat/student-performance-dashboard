@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then((data) => {
                     if (data.success) {
                         alert("✅ Registration Successful! Redirecting to Login...");
-                        window.location.href = "loginPage.html";
+                        window.location.href = "./index.html";
                     } else {
                         alert("❌ User already exists.");
                     }
